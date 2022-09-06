@@ -1,0 +1,13 @@
+<!-- This is our base file. It is built with HTML -->
+
+<%- include("partials/header") -%> <!-- include our header.ejs template -->
+
+<h1>Home</h1>
+<p><%= homeContent %></p>
+
+<% newPosts.forEach(function(post){ %>
+    <h1><%= post.postTitle %></h1>
+    <p><%= post.postText.substring(0,150) + "..." %> <a href= "/posts/<%= post.postTitle %>">Read More</a></p>
+<% }) %>
+
+<%- include("partials/footer") -%> <!-- include our footer.ejs template -->

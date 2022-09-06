@@ -1,0 +1,16 @@
+<!-- This is our base list file. It is built with HTML -->
+
+<%- include("partials/header") -%> <!-- include our header.ejs template -->
+
+<h1>Compose</h1>
+<form action= "/" method= "POST">
+  <div class= "form-group">
+    <label for= "newPostTitle">Title</label>
+    <input class= "form-control" type= "text" name= "newPostTitle">
+    <label for= "newPostText">Post</label>
+    <textarea class= "form-control" type= "text" name= "newPostText" rows= "5" cols= "30"></textarea>
+  </div>
+  <button type="submit" name="publishPost" class= "btn btn-primary">Publish</button>
+</form>
+
+<%- include("partials/footer") -%> <!-- include our footer.ejs template -->
